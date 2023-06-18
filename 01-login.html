@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="01-login.css" />
+  <title>Criar Usuário</title>
+</head>
+
+<body>
+
+  <main>
+  <div class="login">
+    <p>Você está prestes a dar vida ao seu portfólio online, um espaço para mostrar ao mundo o seu talento e paixão. Acredite no seu potencial e permita que sua criatividade flua livremente. Cada detalhe que você adicionar será um passo mais próximo de alcançar seus objetivos e impressionar aqueles que visitarem seu perfil. Lembre-se: sua jornada começa aqui. Vamos juntos criar um portfólio incrível e inspirador!</p>
+    <img src="7987-removebg-preview.png">
+
+  </div>
+  <div class="formulario">
+    
+    <form>
+      <h1>Criar Usuário</h1>
+      <div class="email">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+      </div>
+     
+      <div class="senha">
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" required>
+      </div>
+     
+      <div class="usuario">
+        <label for="usuario">Usuário:</label>
+        <input type="text" id="usuario" required>
+      </div>
+    
+      
+      <div class="img">
+        <label for="imagem">Imagem:</label>
+        <input type="file" id="imagem">
+      </div>
+
+      <div class="btn">
+        <button type="button" onclick="criarUsuario()">Criar Usuário</button>
+      </div>
+  
+    </form>
+  </div>
+</main>
+
+  <script>
+    function criarUsuario() {
+      var email = document.getElementById('email').value;
+      var senha = document.getElementById('senha').value;
+      var usuario = document.getElementById('usuario').value;
+  
+      if (email === '' || senha === '' || usuario === '') {
+        alert('Preencha todos os campos antes de criar o usuário!');
+        return;
+      }
+  
+      // Verificar se já existem usuários salvos no localStorage
+      var usuariosSalvos = localStorage.getItem('usuarios');
+      var usuarios = [];
+  
+      if (usuariosSalvos) {
+        usuarios = JSON.parse(usuariosSalvos);
+      }
+  
+      // Obter o arquivo de imagem selecionado
+      var imagemInput = document.getElementById('imagem');
+      var imagem = imagemInput.files[0];
+  
+      var reader = new FileReader();
+      reader.onload = function(event) {
+        var imagemData = event.target.result;
+  
+        // Criar um objeto com os dados do usuário
+        var novoUsuario = {
+          email: email,
+          senha: senha,
+          usuario: usuario,
+          imagem: imagemData
+        };
+  
+        // Adicionar o novo usuário ao array de usuários
+        usuarios.push(novoUsuario);
+  
+        // Salvar o array de usuários atualizado no localStorage
+        localStorage.setItem('usuarios', JSON.stringify(usuarios));
+  
+        alert('Usuário criado com sucesso!');
+        window.location.href = '03-usu.html'; // Redireciona para a página "03-usu.html"
+      };
+  
+      reader.readAsDataURL(imagem);
+    }
+  </script>
+</body>
+</html>

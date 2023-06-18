@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,800;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="02-ver.css" />
+
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="navegador">
+      <nav>
+        <h2>PROJECT <span>GALLERY</span></h2>
+        <ul class="cabeçalho-link">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Codigo de Programação</a></li>
+          <li><a href="#">Design Gráfico</a></li>
+          <li><a href="#">Fotos</a></li>
+          <li><a href="#">Poemas</a></li>
+          <li><a href="#">Redação</a></li>
+        </ul>
+        <div id="nomeUsuario"></div>
+      </nav>
+    </div>
+    <!--navegador-->
+    <script>
+      window.onload = function() {
+        var usuarioLogado = localStorage.getItem('usuarioLogado');
+  
+        if (usuarioLogado) {
+          usuarioLogado = JSON.parse(usuarioLogado);
+          var nomeUsuario = usuarioLogado.usuario;
+  
+          // Exibir o nome do usuário no elemento com ID "nomeUsuario"
+          document.getElementById('nomeUsuario').textContent = "Usuário logado: " + nomeUsuario;
+        }
+      };
+    </script>
+    <main>
+      <!---CAIXA 01-->
+      <div class="coluna01">
+        <div class="salva">
+
+            <div class="bloco">
+                <h2>Salvar Projetor</h2>
+                <label>Nome do Projeto</label>
+                <input type="name" class="nome_projeto" id="nomeprojeto" placeholder="Nome do Projeto"/>
+                <label>Data de Postagem</label>
+                <input type="date" class="data_criação" id="dataCriacao" />
+            </div>
+          
+            
+          <!---CAIXA 01-->
+          <div class="checkbox">
+            <button onclick="abrirModal()">O Projeto e um CODE</button>
+          </div>
+          <div class="checkbox">
+            <button onclick="abrirModal2()">O Projeto e um Redação ou Poema</button>
+          </div>
+
+          <div class="checkbox">
+            <button onclick="abrirModal4()">O Projeto e um Design ou Foto</button>
+          </div>
+
+          <!-- Botão para abrir o modal -->
+
+          <!-- Modal -->
+          <div id="modal" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="fecharModal()">&times;</span>
+              <div id="conteudo">
+                <label>link do Git Hub</label>
+                <input type="url" class="link" id="link"   required />
+                <h5>Informe a Linguagem usada e o code</h5>
+                <select class="combobox-linguagem" id="Linguagem">
+                  <option value="Python">Python</option>
+                  <option value="JavaScript">JavaScript</option>
+                  <option value="Java">Java</option>
+                  <option value="C++">C++</option>
+                  <option value="TypeScript">TypeScript</option>
+                  <option value="PHP">PHP</option>
+                  <option value="HTML">HTML</option>
+                  <option value="CSS ">CSS</option>
+                </select>
+                <textarea name="Text1" cols="40" rows="5" id="Codigo"></textarea>
+                <button class="salvar" onclick="salvarDadoscod()">Salvar</button>
+              </div>
+            </div>
+          </div>
+          <!--Modal-->
+
+          <!-- Modal -->
+          <div id="modal2" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="fecharModal2()">&times;</span>
+              <div id="conteudo2">
+                <h5>Informe a Redação ou Poema</h5>
+                <label>Tema da Redação ou Poema</label>
+                <input type="text" class="Redação" id="tema" />
+                <textarea name="Text1" cols="40" rows="5" id="texto"></textarea>
+                <button class="salvar" onclick="salvarDadosTEXT()">Salvar</button>
+              </div>
+            </div>
+          </div>
+          <!--Modal-->
+
+          <!-- Modal -->
+          <div id="modal4" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="fecharModal4()">&times;</span>
+              <div id="conteudo4">
+                <h5>Informe o Design ou Foto</h5>
+                <label>Titulo do Design ou Foto</label>
+                <input type="text" class="titulo" id="titulofoto" />
+                <input type="file" id="imagem" />
+                <label>Insira uma descrição do Design</label>
+                <textarea name="Text1" cols="40" rows="5" id="descricao"></textarea>
+                <button class="salvar"  onclick="salvarProjeto()">Salvar</button>
+              </div>
+            </div>
+          </div>
+          <!--Modal-->
+        </div>
+      </div>
+      <div class="coluna02">
+        <h1>FEED</h1>
+        <div id="novaListaDados"></div>
+        <div id="listaDados"></div>
+        <div id="postagens"></div>
+
+   
+      </div>
+      <div class="coluna03">
+        <div class="PERFIL">
+          <button class="per" onclick="irParaOutraPagina()">Acessa Meu Perfil</button>
+          <button class="sair"  onclick="sairDoPerfil()">Sair</button>
+
+        </div>
+      </div>
+    </main>
+
+    <script src="02-ver.js"></script>
+    <script src="02-confg.js"></script>
+
+  </body>
+</html>

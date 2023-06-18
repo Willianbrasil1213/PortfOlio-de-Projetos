@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  
+  #galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background-color: rgb(85, 208, 118);
+  
+  }
+  
+  #galeria img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  
+  }
+  
+  #galeria img:hover {
+    transform: scale(1.1);
+    border-radius: 15px;
+  }
+  
+  #imagemUsuario img{
+    background-color: rgb(85, 208, 118);
+    width: 100px;
+    border-radius: 100px;
+    margin-left: 50px;
+  }
+  
+  .dados{
+    display: inline-flex;
+    background-color: #de4b4b;
+    width: 905px;
+    height: 100px;
+  }
+
+  .cabeçalho-link{
+    display: inline-flex;
+    width: 905px;
+    height: 100px;
+    text-align: center;
+    align-items: center;
+    border: none;
+    justify-content: space-around;
+    font-size: 20px;
+  }
+  
+ul li {
+    display: inline-block;
+    padding: 10px 25px;
+    list-style-type: none;
+}
+
+  .cabeçalho-link li a {
+    background-color: #166695;
+    padding: 10px;
+    border-radius: 10px;
+    color: inherit;
+    text-decoration: none;
+    border: none;
+    
+  }
+
+  .cabeçalho-link li a:hover {
+    background-color: #5fa8d3;
+    
+  }
+ 
+
+  .informa  {
+    display: inline-flex;
+    float: left;
+    width: 900px;
+    color: white;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .navegador {
+    background-color: #5fa8d3;
+    color: white;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+    position: relative;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  
+ 
+  main {
+    display: inline-flex;
+  }
+  
+  .coluna01 {
+    background-color: #166695;
+    width: 1000px;
+    height: 100px;
+  }
+  
+  .galeria {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    width: 500px;
+    height: 800px;
+    padding: 15px;
+  
+  }
+  
+  .galeria h2 {
+    font-size: 45px;
+    text-align: center;
+    margin: 5px;
+    color: #166695;
+  }
+  
+
+  /* Estilo geral */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Postagem */
+  .postagem {
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  .postagem .info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .postagem .info .nome {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .postagem .titulo {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .postagem .data {
+    color: #888888;
+    margin-bottom: 10px;
+  }
+  
+  .postagem .codigo {
+    white-space: pre-wrap;
+  }
+  
+  .postagem.expandir .codigo {
+    white-space: pre;
+    overflow: auto;
+  }
+  
+  .postagem button {
+    padding: 5px 10px;
+    background-color: #eeeeee;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .postagem button:hover {
+    background-color: #dddddd;
+  }
+  
+  .galeria {
+    width: 500px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+  }
+  
+  .galeria-item {
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    align-content: center;
+    display: inline-block;
+  }
+  
+  .galeria-item img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .galeria-item .nome {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .galeria-item h3 {
+    margin: 10px 0;
+  }
+  
+  .galeria-item p {
+    margin-bottom: 10px;
+  }
+  
+  .galeria-item button {
+    margin-top: 10px;
+  }
+  
+  
