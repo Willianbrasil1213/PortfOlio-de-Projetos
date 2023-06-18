@@ -1,0 +1,119 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} 
+
+main{
+  display: inline-flex;
+  justify-content:baseline;
+
+}
+
+.login{
+  background-color: #5FA8D3;
+  width: 600px;
+  height: 400px;
+}
+
+.login p{
+  margin: 10px;
+  padding: 10px;
+  text-align: justify;
+  color: white;
+  font-size: 20px;
+}
+
+.login img{
+width: 600px;
+margin-top: 67px;
+}
+
+form{
+  width: 300px;
+  height: 380px;
+  background-color: #23658d;
+  padding: 10px;
+}
+
+.email{
+  padding: 5px;
+  color: white;
+  display: block;
+}
+
+.email input{
+  width: 280px;
+  height: 20px;
+  border: none;
+}
+
+.senha{
+  padding: 5px;
+  color: white;
+  display: block;
+}
+
+.senha input{
+  width: 280px;
+  height: 20px;
+  border: none;
+}
+
+.usuario{
+  padding: 5px;
+  color: white;
+  display: block;
+}
+
+.usuario input{
+  width: 280px;
+  height: 20px;
+  border: none;
+}
+
+.nivel{
+  padding: 5px;
+  color: white;
+  display: block;
+}
+
+.nivel input{
+  width: 280px;
+  height: 20px;
+  border: none;
+}
+
+.img{
+  padding: 5px;
+  color: white;
+  display: block;
+}
+
+#imagem{
+  background-color: #5FA8D3;
+  color: white;
+}
+
+#imagem input{
+  border: none;
+  color: white;
+}
+
+button{
+  margin: 10px;
+  border: none;
+  width: 200px;
+  height: 30px;
+  background-color: #5FA8D3;
+  color: white;
+  font-size: 20px;
+}
+
+.formulario h1{
+  text-align: center;
+  background-color: #23658d;
+  color: white;
+}
